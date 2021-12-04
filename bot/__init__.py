@@ -441,7 +441,12 @@ if os.path.exists('drive_folder'):
                 INDEX_URLS.append(temp[2])
             except IndexError as e:
                 INDEX_URLS.append(None)
-
+try:
+    GDTOT_COOKIES = getConfig('GDTOT_COOKIES')
+except KeyError:
+    logging.warning('GDTOT_COOKIES not provided!')
+    GDTOT_COOKIES = ""
+    
 SEARCH_PLUGINS = os.environ.get('SEARCH_PLUGINS', None)
 if SEARCH_PLUGINS is not None:
     SEARCH_PLUGINS = json.loads(SEARCH_PLUGINS)
