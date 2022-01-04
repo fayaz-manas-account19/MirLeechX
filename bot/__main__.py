@@ -45,12 +45,12 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("𝗚𝗥𝗢𝗨𝗣", "https://telegram.dog/KristyCloud")
-    buttons.buildbutton("𝗢𝗪𝗡𝗘𝗥", "https://telegram.dog/KristyCloudAdmin")
+    buttons.buildbutton("𝗚𝗥𝗢𝗨𝗣", "https://telegram.dog/KOT_MIRROR_ZONE")
+    buttons.buildbutton("𝗢𝗪𝗡𝗘𝗥", "https://telegram.dog/KOT_BOTS")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive!
+This bot can mirror all your links to Google Drive! BY : @KOT_BOTS
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
@@ -156,7 +156,7 @@ help_string = f'''
 
 def bot_help(update, context):
     button = button_build.ButtonMaker()
-    button.buildbutton("𝗣𝗜𝗡𝗚 𝗛𝗘𝗥𝗘", f"https://telegram.dog/KristyCloudAdmin")
+    button.buildbutton("𝗣𝗜𝗡𝗚 𝗛𝗘𝗥𝗘", f"https://telegram.dog/KOT_FREE_DE_LA_HOYA_OFF")
     reply_markup = InlineKeyboardMarkup(button.build_menu(1))
     sendMarkup(help_string, context.bot, update, reply_markup)
 
@@ -197,7 +197,7 @@ def main():
         os.remove(".restartmsg")
     elif OWNER_ID:
         try:
-            text = "<b>𝗕𝗼𝘁 𝗥𝗲𝘀𝘁𝗮𝗿𝘁𝗲𝗱!</b>"
+            text = "<b>Lɪғᴇ Is Aʙᴏᴜᴛ Pᴀɪɴ Aɴᴅ Gᴀɪɴ Aɴᴅ Lᴏᴠᴇ | 𝗕𝗼𝘁 𝗥𝗲𝘀𝘁𝗮𝗿𝘁𝗲𝗱!</b>"
             bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
             if AUTHORIZED_CHATS:
                 for i in AUTHORIZED_CHATS:
